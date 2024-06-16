@@ -1,0 +1,118 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore Python specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore node.js specific files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore Java specific files
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+*.log
+target/
+build/
+
+# Ignore .NET specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+bin/
+obj/
+
+# Ignore JavaScript specific files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore React Native specific files
+# See https://reactnative.dev/docs/next/environment-setup
+*.idea
+*.vscode
+*.DS_Store
+node_modules/
+*.log
+tmp/
+temp/
+
+# Ignore Logs and temporary files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore compiled source files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore database files
+*.sql
+*.db-journal
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore configuration files
+*.env
+*.env.local
+.env.*
+.envrc
+
+# Ignore backup files
+*.bak
+*.tmp
+
+# Ignore dependency directories
+node_modules/
+vendor/

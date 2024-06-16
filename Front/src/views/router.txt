@@ -1,0 +1,3 @@
+{ path: '/users', element: isAdmin ? <Users/> : <Navigate to="/"/> },
+        { path: '/users/new', element: isAdmin ? <UserForm key="userCreate"/> : <Navigate to="/"/> },
+        { path: '/users/:id', element: isAdmin ? <UserForm key="userUpdate"/> : <Navigate to="/"/> },
