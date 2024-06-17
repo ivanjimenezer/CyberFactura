@@ -8,12 +8,12 @@
     <meta name="description" content="descripcion">
     <title>CyberFactura</title>
 
-    <link rel="stylesheet" href="http://localhost:8000/Front/assets/index-D7S_3eXm.css">
+    <link rel="stylesheet" href="http://localhost:8000/Front/assets/index-CoX0qP0m.css">
 </head>
 <body>
     <div id="root">
     </div>
 
-    <script src="http://localhost:8000/Front/assets/index-BfEYT6JY.js"></script>
+    <script src="http://localhost:8000/Front/assets/index-C9ckHdwT.js"></script>
 </body>
 </html>

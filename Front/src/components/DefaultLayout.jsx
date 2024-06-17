@@ -8,7 +8,7 @@ export default function DefaultLayout() {
     const [selectedLink, setSelectedLink] = useState('/dashboard');
     const location = useLocation();
     if (!token) {
-        return <Navigate to="/login" />;
+        return <Navigate to="/login"/>;
     }
     const user = getUserData();
 

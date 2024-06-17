@@ -15,7 +15,12 @@ class ForceJsonRequest
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $request->headers->set('Accept', 'application/json');
+        if ($request->is('api/*')) {
+            // Set the Accept header to application/json if it's not already set
+            if (!$request->headers->has('Accept') || $request->header('Accept') !== 'application/json') {
+                $request->headers->set('Accept', 'application/json');
+            }
+        }
 
         return $next($request);
     }

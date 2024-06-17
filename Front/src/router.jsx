@@ -73,7 +73,7 @@ import { useStateContext } from "./context/ContextProvider";
       element: <GuestLayout/>,
       children:[
         { path: '/login', element: <Login/> },
-        { path: '/signup', element: <Signup/> }
+         
       ]
     }, 
     { path: '*', element: <NotFound/> }

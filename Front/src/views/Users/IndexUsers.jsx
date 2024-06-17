@@ -110,7 +110,7 @@ export default function IndexUsers() {
         <div className="container" >
             <div className="header-title">
             <h2>Gestión de Usuarios</h2>
-                <button onClick={() => HandleCreate()} className="btn btn-primary">Nuevo Emisor</button>
+                <button onClick={() => HandleCreate()} className="btn btn-primary">Nuevo Usuario</button>
             </div>
             <Table datos={datajson} updateRoute={reactUptCli}
                 apiUpdate={link+'/'} apiDelete={link+'/'} id={id_column} linkColumns={['']}

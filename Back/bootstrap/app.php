@@ -28,8 +28,8 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);*/
          $middleware->prepend(RestrictMiddleware::class);  
          $middleware->append(Cors::class);
-         //$middleware->append(ForceJsonRequest::class);
-         //$middleware->append(ForceJsonResponse::class);
+        $middleware->append(ForceJsonRequest::class);//If I comment this
+        $middleware->append(ForceJsonResponse::class);// and this line the problem is solved
          $middleware->append(LogApiCalls::class);
 
     })
