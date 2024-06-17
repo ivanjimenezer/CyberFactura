@@ -49,12 +49,26 @@ const IVASalesHistogram = ({ retencionSales }) => {
               title: {
                 display: true,
                 text: 'Fecuencia', // Y-axis label
+                color: '#bec2c1', // Y-axis title color
+              },
+              border: {
+                color: '#bec2c1', // Y-axis border color
+              },
+              ticks: {
+                color: '#bec2c1', // Y-axis labels color
               },
             },
             x: {
               title: {
                 display: true,
                 text: 'Producto/Servicio', // X-axis label
+                color: '#bec2c1', // X-axis title color
+              },
+              ticks: {
+                color: '#bec2c1', // Y-axis labels color
+              },
+              border: {
+                color: '#bec2c1', // Y-axis border color
               },
             },
           },

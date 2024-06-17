@@ -35,8 +35,7 @@ const RetencionSalesHistogram = ({ retencionSales }) => {
             {
               label: 'Cantidad', // Dataset label
               data: frequencies, // Y-axis data (frequencies)
-              backgroundColor: colors, // Background colors for bars
-              borderColor: 'rgba(0, 0, 0, 0.6)', // Border color
+              backgroundColor: colors, // Background colors for bars 
               borderWidth: 1, // Border width
             },
           ],
@@ -49,12 +48,28 @@ const RetencionSalesHistogram = ({ retencionSales }) => {
               title: {
                 display: true,
                 text: 'Frecuencia', // Y-axis label
+                color: '#bec2c1', // Y-axis title color
+              },
+              ticks: {
+                color: '#bec2c1', // Y-axis labels color
+              },
+               
+              border: {
+                color: '#bec2c1', // Y-axis border color
               },
             },
             x: {
               title: {
                 display: true,
                 text: 'Producto/Servicio', // X-axis label
+                color: '#bec2c1', // X-axis title color
+              },
+              ticks: {
+                color: '#bec2c1', // X-axis labels color
+              },
+               
+              border: {
+                color: '#bec2c1', // X-axis border color
               },
             },
           },

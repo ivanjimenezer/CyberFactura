@@ -139,7 +139,7 @@ export default function FormsImpuestos() {
 
     return (
         <div className="container">
-            <h2 className="title-view" >{title}</h2>
+            <h2 className="title-view" ref={scrollForms}>{title}</h2>
             <div className="forms-container" >
                 {loading && <div className="alert alert-loading">Enviando y esperando respuesta...</div>}
                 {successMessage && <div className="alert alert-success success-message">{successMessage}</div>}

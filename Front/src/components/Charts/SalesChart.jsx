@@ -53,9 +53,21 @@ const SalesChart = ({ salesData }) => {
             y: {
               beginAtZero: true,
               ticks: {
+                color: '#bec2c1',
                 callback: function (value) {
                   return '$' + value;
                 },
+              },
+            },
+            x: {
+              ticks: {
+                color: '#bec2c1', // Set your hex color here
+              },
+              grid: {
+                color: '#bec2c1', // Set your hex color here for the x-axis grid lines
+              },
+              border: {
+                color: '#bec2c1', // Set your hex color here for the x-axis line
               },
             },
           },
@@ -63,6 +75,9 @@ const SalesChart = ({ salesData }) => {
             legend: {
               display: true,
               position: 'top',
+              labels: {
+                color: '#bec2c1', // Set your hex color here
+              },
             },
           },
         },
@@ -87,7 +102,7 @@ const SalesChart = ({ salesData }) => {
           <input type="date" className='input-dateFilter'  value={endDate} onChange={e => setEndDate(e.target.value)} />
         </div>
 
-        <button className='btn-dateFilter' onClick={filterData}>Aplicar</button>
+        <button className='btn-dateFilter text-dark ' onClick={filterData}>Aplicar</button>
       </div>
 
       <canvas className='barChart-Ventas' ref={chartContainer}/>

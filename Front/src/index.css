@@ -169,13 +169,7 @@ input:focus {
   border-radius: 6px;
 }
 
-.btn-logout:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
-.btn:hover {
-  /* background: #5b08a7;*/
-}
 
 .btn:focus {
   /*background: #5b08a7;*/
@@ -488,6 +482,9 @@ input:focus {
   /* Calibri (Body) and fallback fonts */
   font-size: 20px;
   /* Set the desired font size */
+}
+.btn-logout:active {
+  background-color: #f48fc8;
 }
 
 .btn-logout:hover {
@@ -1216,7 +1213,7 @@ button.btn-danger {
 /*---------------------------------------- Dashboard ---------------------------------------- */
 /* ENTIRE VIEW */
 .dashboard {
-  background-color: #133455;
+  
   width: fit-content;
 }
 
@@ -1328,19 +1325,22 @@ button.btn-danger {
 
 .filter-date button {
   /* Style the button optionally */
-  color: white;
-  padding: 8px 16px;
+  color: #034b93;
+  height: 2rem;
+  width: 6rem;
+  padding: 1%;
+  
   border: none;
   cursor: pointer;
-  height: 30px;
+  
   border-radius: 5px;
-  text-align: right;
   align-self: center;
 
 }
 
 .btn-dateFilter {
   background-color: #4CAF50;
+  color: #9aa1a5;
   /* Green color */
 }
 
@@ -1360,7 +1360,26 @@ button.btn-danger {
   padding: 0px 0px;
 }
 
+.chartplot {
+  color: #bec2c1; /* Set your hex color here */
+}
+
+
+.chartplot input,
+.chartplot button {
+  color: #bec2c1; /* Set your hex color here */
+}
+
+
+/*---------------TOTAL VENTAS ENTAS------------------------*/
+.barChart-Ventas{
+  color: #bec2c1;
+
+}
+
 /*---------------TOP SELLING PRODUCTS-------------------------*/
+
+
 
 /*---------------------------------------- FACTURA ---------------------------------------- */
 /* Autocomplete Emisor/Receptor Labels */

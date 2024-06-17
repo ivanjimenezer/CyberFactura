@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class LogApiCalls
@@ -37,8 +38,18 @@ class LogApiCalls
         $queryParams = $request->query();
         $userAgent = $request->header('User-Agent');
         $userId = Auth::check() ? Auth::user()->id : null;
-        $responseStatus = $response->status(); 
-        $responseBody = $response->getContent();
+        // Initialize response variables
+        $responseStatus = null;
+        $responseBody = null;
+
+        // Check if the response is a BinaryFileResponse
+        if ($response instanceof BinaryFileResponse) {
+            $responseStatus = $response->getStatusCode();
+            $responseBody = 'Binary file response';
+        } else {
+            $responseStatus = $response->getStatusCode();
+            $responseBody = $response->getContent();
+        }
 
         // Log the information using the custom channel
         Log::channel('api_calls')->info('API Call Log', [

@@ -139,13 +139,13 @@ export default function FormsCliente() {
 
     return (
         <div className="container">
-            <h2 className="title-view">{title}</h2>
+            <h2 className="title-view" ref={scrollForms}>{title}</h2>
             <div className="forms-container">
             {loading && <div className="alert alert-loading">Enviando y esperando respuesta...</div>}
             {successMessage && <div className="alert alert-success success-message">{successMessage}</div>}
             {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
             <form onSubmit={handleSubmit}>
-                <div className="Forms-input-group"  ref={scrollForms}>
+                <div className="Forms-input-group"  >
                     { /*RFC*/}
                     <InputField label="RFC"
                         id="RFC"

@@ -28,8 +28,8 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);*/
          $middleware->prepend(RestrictMiddleware::class);  
          $middleware->append(Cors::class);
-         $middleware->append(ForceJsonRequest::class);
-         $middleware->append(ForceJsonResponse::class);
+         //$middleware->append(ForceJsonRequest::class);
+         //$middleware->append(ForceJsonResponse::class);
          $middleware->append(LogApiCalls::class);
 
     })

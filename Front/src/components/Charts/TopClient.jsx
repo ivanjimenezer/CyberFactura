@@ -33,7 +33,7 @@ const TopClientsChart = ({ topClients }) => {
                 'rgba(75, 192, 192, 0.6)', // Green
                 'rgba(153, 102, 255, 0.6)', // Purple
               ], // Background colors for each segment
-              borderColor: 'white', // Border color
+              borderColor: '#bec2c1', // Border color
               borderWidth: 1, // Border width
             },
           ],
@@ -44,6 +44,9 @@ const TopClientsChart = ({ topClients }) => {
             legend: {
               display: true, // Display legend
               position: 'right', // Position legend on the right
+              labels: {
+                color: '#bec2c1', // Set text color for legend labels to your desired hex value
+              },
             },
           },
         },

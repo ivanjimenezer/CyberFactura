@@ -12,7 +12,7 @@ Route::get('/storage/facturas/pdf/{uuid}.pdf', function ($uuid) {
 });
 
 Route::get('/', function() {
-    return view('welcome');
+    return view('main');
 });
 /*
 Route::get('/{any}', function () {
@@ -20,5 +20,5 @@ Route::get('/{any}', function () {
 })->where('any', '.*');
 */
 Route::get('{path}', function ($path) {
-    return view('welcome'); // Replace 'react-app.index' with your view name
+    return view('main'); // Replace 'react-app.index' with your view name
 })->where('path', '^(?!api).*$');

@@ -12,13 +12,15 @@ const validateRFC= (RFC) => {
 
 const validateRazonSoc = (RazonSoc) => {
     const errors = {};
+    const RazonSocpperCase = RazonSoc.toUpperCase(); // Convert input to uppercase
+    
     if (RazonSoc === "") {
         errors.RazonSoc = "La Razón Social es necesaria";
     } else if (RazonSoc.length > 45) {
         errors.RazonSoc = "La Razón Social debe ser menor a 45 caracteres";
     } else if (RazonSoc.length < 10) {
         errors.RazonSoc = "La Razón Social debe ser mayor a 10 caracteres";
-    } else if (!/^[A-Z\s]+$/.test(RazonSoc)) {
+    } else if (RazonSocpperCase !== RazonSoc) {
         errors.RazonSoc = "La Razón Social debe estar en mayúsculas";
     }
 

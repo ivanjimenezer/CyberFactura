@@ -27,7 +27,7 @@ const TopProductsChart = ({ topProducts }) => {
               label: 'Top Selling Products', // Dataset label
               data: frequencies, // Y-axis data (frequencies)
               backgroundColor: 'rgba(75, 192, 192, 0.6)', // Bar background color
-              borderColor: 'rgba(75, 192, 192, 1)', // Bar border color
+              borderColor: '#bec2c1', // Bar border color
               borderWidth: 1, // Bar border width
             },
           ],
@@ -37,12 +37,32 @@ const TopProductsChart = ({ topProducts }) => {
           scales: {
             x: {
               beginAtZero: true, // Start the X-axis at zero
+              ticks: {
+                color: '#bec2c1', // Set x-axis labels color
+              },
+               
+              border: {
+                color: '#bec2c1', // Set x-axis border color
+              },
+            },
+            y: {
+              ticks: {
+                color: '#bec2c1', // Set y-axis labels color
+              },
+              border: {
+                color: '#bec2c1', // Set x-axis border color
+              },
+              
             },
           },
           plugins: {
             legend: {
               display: false, // Hide legend
+              labels: {
+                color: '#bec2c1', // Legend labels color
+              },
             },
+            
           },
         },
       });
