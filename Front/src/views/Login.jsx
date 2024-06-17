@@ -87,8 +87,8 @@ export default function Login() {
               </div>
             }
 
-            <input className="login-input" ref={emailRef} type="email" placeholder="Ingrese su correo" />
-            <input className="login-input" ref={passwordRef} type="password" placeholder="Ingrese su contraseña" />
+            <input value='invitado@example.com' className="login-input" ref={emailRef} type="email" placeholder="Ingrese su correo" />
+            <input value='Invitado_098'  className="login-input" ref={passwordRef} type="password" placeholder="Ingrese su contraseña" />
             <button className="btn btn-login">INICIAR SESIÓN</button>
           </form>
         </div>

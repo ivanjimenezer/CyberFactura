@@ -694,7 +694,7 @@ input:focus {
   margin-left: 1%;
   min-width: 79vw;
   max-width: 81vw;
-  height: 87vh;
+  height: 85vh;
   
 }
 .forms-container{
@@ -705,6 +705,7 @@ input:focus {
 }
 
 .table-container {
+  max-height: 70vh;
   overflow: scroll;
 }
 

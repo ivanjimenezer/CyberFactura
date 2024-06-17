@@ -109,7 +109,7 @@ export default function IndexUsers() {
     return (
         <div className="container" >
             <div className="header-title">
-            <h2>Gestión de Usuarios</h2>
+            <h2>Gestión de Usuarios</h2>a
                 <button onClick={() => HandleCreate()} className="btn btn-primary">Nuevo Usuario</button>
             </div>
             <Table datos={datajson} updateRoute={reactUptCli}
