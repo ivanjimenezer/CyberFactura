@@ -4,6 +4,8 @@ import axiosClient from "../axios-client.js";
 import { useStateContext } from "../context/ContextProvider.jsx";
 import { useState } from "react";
 export default function Login() {
+  const [email, setEmail] = useState('invitado@example.com');
+  const [password, setPassword] = useState('Invitado_098');
 
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -17,19 +19,19 @@ export default function Login() {
     ev.preventDefault()
     setLoading(true); // Set loading state to true
 
-    const email = emailRef.current.value;
-    const password = passwordRef.current.value;
-  
-      if (!email || !password) {
-        setErrors({ email: !email ? ["El correo es requerido"] : [], password: !password ? ["La contraseña es requerida"] : [] });
-        setLoading(false);
-        return;
-      }
+    ///const email = emailRef.current.value;
+    //const password = passwordRef.current.value;
+
+    if (!email || !password) {
+      setErrors({ email: !email ? ["El correo es requerido"] : [], password: !password ? ["La contraseña es requerida"] : [] });
+      setLoading(false);
+      return;
+    }
 
     //datos que se enviaran
     const payload = {
-      'email': emailRef.current.value,
-      'password': passwordRef.current.value,
+      email,
+      password,
     };
 
     console.log('Submitting login form with payload:', payload);
@@ -59,10 +61,10 @@ export default function Login() {
 
       {loading && (
         <div className="loading-layout" >
-        <div className="loading-message">
-          <div className="loading-spinner"></div>
-          Cargando...
-        </div>
+          <div className="loading-message">
+            <div className="loading-spinner"></div>
+            Cargando...
+          </div>
         </div>
       )}
 
@@ -87,8 +89,20 @@ export default function Login() {
               </div>
             }
 
-            <input value='invitado@example.com' className="login-input" ref={emailRef} type="email" placeholder="Ingrese su correo" />
-            <input value='Invitado_098'  className="login-input" ref={passwordRef} type="password" placeholder="Ingrese su contraseña" />
+            <input
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="login-input"
+              type="email"
+              placeholder="Ingrese su correo"
+            />
+            <input
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className="login-input"
+              type="password"
+              placeholder="Ingrese su contraseña"
+            />
             <button className="btn btn-login">INICIAR SESIÓN</button>
           </form>
         </div>

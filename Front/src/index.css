@@ -1205,6 +1205,7 @@ button.btn-danger {
 }
 
 .form-control-password {
+  color: #ced4da;
   display: flex;
   width: 20%;
   height: 20px;

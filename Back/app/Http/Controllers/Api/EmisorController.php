@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Services\FileService;
 use App\Services\InsertCFDIService;
+use App\Models\User;
 
 class EmisorController extends Controller
 { // ctrl +shift +L -> seleccionar similares
@@ -138,12 +139,19 @@ class EmisorController extends Controller
         }
     }
 
-    public function updating(UpdateEmisorRequest $request, $id)
+    public function updating(UpdateEmisorRequest $request, $id, User $user)
     {
         try {
 
             // $passPath = $request->pass ? 'si hay': null; 
             $validatedData = $request;
+            $authUser = auth()->user(); 
+            
+            // Determinar si se quiere modificar al usuario root
+            if($authUser->type == "common"){
+                //Solo el usuario root puede modificarse a si mismo
+                return response()->json(['error' => 'No estas autorizado para modificar a los Emisores'], 403);
+            }
 
             // Iterate over the fields to check if they are not null and contain files
             $imgPath =  $request->hasFile('img') ? "Existe" : null;
@@ -262,6 +270,14 @@ class EmisorController extends Controller
     public function destroy($id)
     {
         try { 
+
+            $authUser = auth()->user(); 
+            
+            // Determinar si se quiere modificar al usuario root
+            if($authUser->type == "common"){
+                //Solo el usuario root puede modificarse a si mismo
+                return response()->json(['error' => 'No estas autorizado para eliminar a los Emisores'], 403);
+            }
             
             //obtener rutas de los archivos
             $arrayrutas = $this->fileService->getRutas($id);

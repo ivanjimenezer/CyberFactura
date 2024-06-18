@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'url_backend' => env('BACKEND_URL', 'http://localhost:8000'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
